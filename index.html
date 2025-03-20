@@ -34,15 +34,16 @@
         <source src="Cute Pink Feminine Pixelated Loading Animation Video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <script>
-        document.querySelector("video").addEventListener("ended", () => {
-            window.location.href = "CV.html";
-        });
 
-        // Fallback timeout in case the video duration is too long
-        setTimeout(() => {
-            window.location.href = "CV.html";
-        }, 4000);
+    <script>
+        let video = document.getElementById("loadingVideo");
+
+        // Ensure video plays even if autoplay is blocked
+        video.play().catch(error => console.log("Autoplay blocked:", error));
+
+        // Redirect after video ends or fallback after 4 seconds
+        video.addEventListener("ended", () => window.location.href = "CV.html");
+        setTimeout(() => window.location.href = "CV.html", 4000);
     </script>
 </body>
 </html>
