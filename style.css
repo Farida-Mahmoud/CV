@@ -1,0 +1,235 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rosybrown; /* Glaucous */
+    color: white;
+    font-size: 16px; /* Medium size */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#FFE4E1;
+    color: black;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.handwritten {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2, h4, h5, h6 {
+    font-size: 2em; /* Big size for all headings */
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    padding-right: 50px;
+}
+
+.right img {
+    width: 250px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    background-blend-mode: multiply;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button {
+    background-color:#dcae96; /* Opal */
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color:#b57170; /* Ash Gray */
+}
+
+/* Experience & Projects */
+.experience-cards, .project-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color:#FFE4E1;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Social Media Icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Social Icons Colors */
+.fa-facebook {
+    color: black;
+}
+
+.fa-github,
+.fa-envelope-o,
+.fa-linkedin-square {
+    color: black;
+}
+
+/* Responsive Design */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+    #intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .right img {
+        width: 200px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .handwritten {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    h1, h2, h4, h5, h6 {
+        font-size: 1.5em;
+    }
+
+    .right img {
+        width: 180px;
+    }
+
+    .experience-cards, .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .fa {
+        font-size: 24px;
+        padding: 15px;
+        width: 40px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 480px) {
+    .handwritten {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .right img {
+        width: 150px;
+    }
+
+    .fa {
+        font-size: 20px;
+        padding: 10px;
+        width: 35px;
+    }
+}
